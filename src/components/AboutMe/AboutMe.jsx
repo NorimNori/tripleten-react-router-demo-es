@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function AboutMe() {
   return (
-    <div>
+    <div className="about">
       <ul className="links">
         <li>
           <Link to="my-story">Mi historia</Link>
@@ -15,6 +15,7 @@ function AboutMe() {
         </li>
       </ul>
       <p>Soy una persona sencilla. Veo emojis, escribo reseñas.</p>
+      <Outlet />
     </div>
   );
 }
