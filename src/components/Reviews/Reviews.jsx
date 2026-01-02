@@ -1,3 +1,5 @@
+import "./Reviews.css";
+
 function Reviews({ reviews }) {
   return (
     <div>
