@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import "./Reviews.css";
 
 function Reviews({ reviews }) {
   return (
-    <div>
+    <div className="reviews">
       <ul className="reviews__list">
         {reviews &&
           reviews.map((review) => {
             return (
               <li key={review.id} className="reviews__item">
-                {review.title}
+                <Link to={`${review.id}`}>{review.title}</Link>
               </li>
             );
           })}

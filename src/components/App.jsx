@@ -11,6 +11,7 @@ import MyStory from "./AboutMe/MyStory";
 import SiteHistory from "./AboutUs/SiteHistory";
 import SiteMission from "./AboutUs/SiteMission";
 import { useEffect, useState } from "react";
+import Review from "./Reviews/Review";
 
 function App() {
   const [reviews, setReviews] = useState([]); // Nueva variable useState
@@ -44,6 +45,10 @@ function App() {
           <Route path="site-history" element={<SiteHistory />} />
           <Route path="site-mission" element={<SiteMission />} />
         </Route>
+        <Route
+          path="/reviews/:reviewId"
+          element={<Review reviews={reviews} />}
+        />
       </Routes>
     </div>
   );
