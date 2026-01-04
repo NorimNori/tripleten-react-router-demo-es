@@ -12,6 +12,7 @@ import SiteHistory from "./AboutUs/SiteHistory";
 import SiteMission from "./AboutUs/SiteMission";
 import { useEffect, useState } from "react";
 import Review from "./Reviews/Review";
+import PageNotFound from "./PageNotFound/PageNotFound";
 
 function App() {
   const [reviews, setReviews] = useState([]); // Nueva variable useState
@@ -34,6 +35,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/reviews" element={<Reviews reviews={reviews} />} />
         <Route path="/about-me" element={<AboutMe />}>
